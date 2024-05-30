@@ -1,19 +1,19 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useRef as UseRef} from "react";
 import { TbArrowUpRight } from "react-icons/tb";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll as UseScroll, useTransform as UseTranform } from "framer-motion";
 import { titleVariants, desVariants, tagVariants } from "../../utils/animate";
 
 const page = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
+  const ref = UseRef(null);
+  const { scrollYProgress } = UseScroll({
     target: ref,
     offset: ["start end", "end end"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scale = UseTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
     <div>
       <div className="bg-[url('https://www.shutterstock.com/shutterstock/photos/2063156102/display_1500/stock-photo-nice-to-meet-you-in-our-team-friendly-man-leader-boss-shake-hand-of-new-staff-member-welcome-young-2063156102.jpg')] bg-center bg-cover text-white ">
