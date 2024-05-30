@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React, { useRef as UseRef} from "react";
 import { TbArrowUpRight } from "react-icons/tb";
-import { motion, useScroll as UseScroll, useTransform as UseTranform } from "framer-motion";
+import { motion, useScroll as UseScroll, useTransform as UseTransform } from "framer-motion";
 import { titleVariants, desVariants, tagVariants } from "../../utils/animate";
 
 const page = () => {
