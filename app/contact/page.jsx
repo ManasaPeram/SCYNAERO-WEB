@@ -41,8 +41,8 @@ export default function Contact() {
       body: JSON.stringify(formData)
     });
 
-    const result = await response.json();
-    console.log(result);
+    // const result = await response.json();
+    // console.log(result);
     // You can add further logic to handle the response here
   };
 
