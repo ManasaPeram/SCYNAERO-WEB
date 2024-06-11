@@ -30,9 +30,10 @@ export default function Contact() {
     }));
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const response = await fetch('/api/submitForm', {
       method: 'POST',
       headers: {
@@ -40,11 +41,32 @@ export default function Contact() {
       },
       body: JSON.stringify(formData)
     });
-
-    // const result = await response.json();
-    // console.log(result);
-    // You can add further logic to handle the response here
+  
+    if (response.ok) {
+      // Handle success
+      console.log('Form submitted successfully!');
+    } else {
+      // Handle error
+      console.log('Error submitting form');
+    }
   };
+  
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const response = await fetch('/api/submitForm', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(formData)
+  //   });
+
+  //   // const result = await response.json();
+  //   // console.log(result);
+  //   // You can add further logic to handle the response here
+  // };
 
   return (
     <div className="px-6 py-24 sm:py-32 lg:px-8 ">
